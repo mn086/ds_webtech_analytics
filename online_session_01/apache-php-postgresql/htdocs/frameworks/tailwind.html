@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mein Blog - Tailwind CSS</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="bg-blue-600 text-white mb-8">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <a href="#" class="text-xl font-bold">Mein Blog</a>
+            <div class="hidden md:block">
+                <ul class="flex space-x-6">
+                    <li><a href="#" class="hover:text-blue-200">Home</a></li>
+                    <li><a href="#" class="hover:text-blue-200">Artikel</a></li>
+                    <li><a href="#" class="hover:text-blue-200">Über mich</a></li>
+                    <li><a href="#" class="hover:text-blue-200">Kontakt</a></li>
+                </ul>
+            </div>
+            <button class="md:hidden">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <header class="container mx-auto px-4 mb-8">
+        <div class="bg-white rounded-lg shadow-md p-8">
+            <h1 class="text-4xl font-bold text-gray-800 mb-2">Willkommen auf meinem Blog</h1>
+            <p class="text-xl text-gray-600 mb-4">Hier teile ich meine Gedanken zu Webentwicklung und Design.</p>
+            <button class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+                Mehr erfahren
+            </button>
+        </div>
+    </header>
+
+    <!-- Blog Posts -->
+    <main class="container mx-auto px-4">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <!-- Post 1 -->
+            <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                <img src="https://picsum.photos/800/400?random=1" class="w-full h-48 object-cover" alt="Blog Post Image">
+                <div class="p-6">
+                    <h2 class="text-xl font-bold text-gray-800 mb-2">HTML Grundlagen</h2>
+                    <p class="text-gray-600 mb-4">Ein Überblick über die wichtigsten HTML-Tags für Anfänger.</p>
+                    <a href="#" class="text-blue-600 hover:text-blue-800 font-medium">Weiterlesen →</a>
+                </div>
+            </div>
+            
+            <!-- Post 2 -->
+            <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                <img src="https://picsum.photos/800/400?random=2" class="w-full h-48 object-cover" alt="Blog Post Image">
+                <div class="p-6">
+                    <h2 class="text-xl font-bold text-gray-800 mb-2">CSS Styling Tipps</h2>
+                    <p class="text-gray-600 mb-4">Wie du deine Webseite mit CSS zum Leben erwecken kannst.</p>
+                    <a href="#" class="text-blue-600 hover:text-blue-800 font-medium">Weiterlesen →</a>
+                </div>
+            </div>
+            
+            <!-- Post 3 -->
+            <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                <img src="https://picsum.photos/800/400?random=3" class="w-full h-48 object-cover" alt="Blog Post Image">
+                <div class="p-6">
+                    <h2 class="text-xl font-bold text-gray-800 mb-2">JavaScript für Einsteiger</h2>
+                    <p class="text-gray-600 mb-4">Einfache JavaScript-Konzepte für interaktive Webseiten.</p>
+                    <a href="#" class="text-blue-600 hover:text-blue-800 font-medium">Weiterlesen →</a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white mt-12 py-6">
+        <div class="container mx-auto px-4 text-center">
+            <p>© 2025 Mein Blog. Alle Rechte vorbehalten.</p>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,11 @@
+services:
+  web:
+    build: .
+    ports:
+      - "9876:9876"
+    volumes:
+      - .:/app
+    environment:
+      - FLASK_ENV=development
+      - FLASK_DEBUG=1
+    restart: unless-stopped 

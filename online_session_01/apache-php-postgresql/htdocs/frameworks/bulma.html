@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mein Blog - Bulma</title>
+    <!-- Bulma CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <!-- Font Awesome für Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar is-primary mb-5">
+        <div class="container">
+            <div class="navbar-brand">
+                <a class="navbar-item is-size-4 has-text-weight-bold" href="#">
+                    Mein Blog
+                </a>
+                <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                </a>
+            </div>
+            <div class="navbar-menu">
+                <div class="navbar-end">
+                    <a class="navbar-item" href="#">Home</a>
+                    <a class="navbar-item" href="#">Artikel</a>
+                    <a class="navbar-item" href="#">Über mich</a>
+                    <a class="navbar-item" href="#">Kontakt</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <section class="container mb-6">
+        <div class="notification is-light">
+            <h1 class="title is-2">Willkommen auf meinem Blog</h1>
+            <p class="subtitle is-4">Hier teile ich meine Gedanken zu Webentwicklung und Design.</p>
+            <button class="button is-primary is-medium">Mehr erfahren</button>
+        </div>
+    </section>
+
+    <!-- Blog Posts -->
+    <section class="container">
+        <div class="columns">
+            <!-- Post 1 -->
+            <div class="column is-4">
+                <div class="card">
+                    <div class="card-image">
+                        <figure class="image is-4by3">
+                            <img src="https://picsum.photos/800/600?random=1" alt="Blog Post Image">
+                        </figure>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="title is-4">HTML Grundlagen</h3>
+                        <p class="content">Ein Überblick über die wichtigsten HTML-Tags für Anfänger.</p>
+                        <a href="#" class="button is-primary is-outlined">Weiterlesen</a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Post 2 -->
+            <div class="column is-4">
+                <div class="card">
+                    <div class="card-image">
+                        <figure class="image is-4by3">
+                            <img src="https://picsum.photos/800/600?random=2" alt="Blog Post Image">
+                        </figure>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="title is-4">CSS Styling Tipps</h3>
+                        <p class="content">Wie du deine Webseite mit CSS zum Leben erwecken kannst.</p>
+                        <a href="#" class="button is-primary is-outlined">Weiterlesen</a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Post 3 -->
+            <div class="column is-4">
+                <div class="card">
+                    <div class="card-image">
+                        <figure class="image is-4by3">
+                            <img src="https://picsum.photos/800/600?random=3" alt="Blog Post Image">
+                        </figure>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="title is-4">JavaScript für Einsteiger</h3>
+                        <p class="content">Einfache JavaScript-Konzepte für interaktive Webseiten.</p>
+                        <a href="#" class="button is-primary is-outlined">Weiterlesen</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer has-background-dark has-text-white mt-6">
+        <div class="content has-text-centered">
+            <p>© 2025 Mein Blog. Alle Rechte vorbehalten.</p>
+        </div>
+    </footer>
+
+    <!-- Für Navbar Toggle (minimales JS) -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+            if ($navbarBurgers.length > 0) {
+                $navbarBurgers.forEach(el => {
+                    el.addEventListener('click', () => {
+                        const target = el.dataset.target;
+                        const $target = document.getElementById(target);
+                        el.classList.toggle('is-active');
+                        $target.classList.toggle('is-active');
+                    });
+                });
+            }
+        });
+    </script>
+</body>
+</html>

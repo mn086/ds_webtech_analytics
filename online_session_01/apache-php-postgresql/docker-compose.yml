@@ -1,0 +1,21 @@
+
+
+services:
+  apache-php:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: apache-php-postgresql
+    ports:
+      - "80:80"
+    volumes:
+      - ./htdocs:/var/www/html
+    environment:
+      - APACHE_DOCUMENT_ROOT=/var/www/html
+    restart: unless-stopped
+    networks:
+      - web-network
+
+networks:
+  web-network:
+    driver: bridge
