@@ -4,54 +4,52 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mein Blog</title>
-    <!-- CSS-Datei einbinden -->
-    <link rel="stylesheet" href="styles.css">
 </head>
-<body>
+<body style="font-family: Arial, sans-serif; line-height: 1.6; color: #333; max-width: 1200px; margin: 0 auto; padding: 0 20px;">
     <!-- Navigation -->
-    <nav>
-        <h1>Mein Blog</h1>
-        <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Artikel</a></li>
-            <li><a href="#">Über mich</a></li>
-            <li><a href="#">Kontakt</a></li>
+    <nav style="background-color: #3182ce; color: white; padding: 1rem; margin-bottom: 2rem; display: flex; justify-content: space-between; align-items: center;">
+        <h1 style="margin: 0; font-size: 1.5rem;">Mein Blog</h1>
+        <ul style="display: flex; list-style: none;">
+            <li style="margin-left: 1.5rem;"><a style="color: white; text-decoration: none;" href="#">Home</a></li>
+            <li style="margin-left: 1.5rem;"><a style="color: white; text-decoration: none;" href="#">Artikel</a></li>
+            <li style="margin-left: 1.5rem;"><a style="color: white; text-decoration: none;" href="#">Über mich</a></li>
+            <li style="margin-left: 1.5rem;"><a style="color: white; text-decoration: none;" href="#">Kontakt</a></li>
         </ul>
     </nav>
 
     <!-- Header -->
-    <header>
-        <h2>Willkommen auf meinem Blog</h2>
-        <p>Hier teile ich meine Gedanken zu Webentwicklung und Design.</p>
-        <button>Mehr erfahren</button>
+    <header style="background-color: #f8f9fa; padding: 2rem; border-radius: 5px; margin-bottom: 2rem;">
+        <h2 style="font-size: 2rem; margin-bottom: 1rem;">Willkommen auf meinem Blog</h2>
+        <p style="margin-bottom: 1.5rem; font-size: 1.2rem; color: #555;">Hier teile ich meine Gedanken zu Webentwicklung und Design.</p>
+        <button style="background-color: #3182ce; color: white; border: none; padding: 0.7rem 1.5rem; font-size: 1rem; border-radius: 4px; cursor: pointer;">Mehr erfahren</button>
     </header>
 
     <!-- Blog Posts -->
-    <main>
-        <article>
-            <img src="https://picsum.photos/400/200?random=1" alt="HTML Bild">
-            <h3>HTML Grundlagen</h3>
-            <p>Ein Überblick über die wichtigsten HTML-Tags für Anfänger.</p>
-            <a href="#">Weiterlesen</a>
+    <main style="display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 2rem; margin-bottom: 3rem;">
+        <article style="border: 1px solid #ddd; border-radius: 5px; overflow: hidden;">
+            <img style="width: 100%; height: 200px; object-fit: cover;" src="https://picsum.photos/400/200?random=1" alt="HTML Bild">
+            <h3 style="margin: 1rem 0 0.5rem; padding: 0 1rem;">HTML Grundlagen</h3>
+            <p style="margin-bottom: 1rem; color: #555; padding: 0 1rem;">Ein Überblick über die wichtigsten HTML-Tags für Anfänger.</p>
+            <a style="display: inline-block; margin: 0 1rem 1rem; color: #3182ce; text-decoration: none; font-weight: bold; padding: 0 1rem;" href="#">Weiterlesen</a>
         </article>
         
-        <article>
-            <img src="https://picsum.photos/400/200?random=2" alt="CSS Bild">
-            <h3>CSS Styling Tipps</h3>
-            <p>Wie du deine Webseite mit CSS zum Leben erwecken kannst.</p>
-            <a href="#">Weiterlesen</a>
+        <article style="border: 1px solid #ddd; border-radius: 5px; overflow: hidden;">
+            <img style="width: 100%; height: 200px; object-fit: cover;" src="https://picsum.photos/400/200?random=2" alt="CSS Bild">
+            <h3 style="margin: 1rem 0 0.5rem; padding: 0 1rem;">CSS Styling Tipps</h3>
+            <p style="margin-bottom: 1rem; color: #555; padding: 0 1rem;">Wie du deine Webseite mit CSS zum Leben erwecken kannst.</p>
+            <a style="display: inline-block; margin: 0 1rem 1rem; color: #3182ce; text-decoration: none; font-weight: bold; padding: 0 1rem;" href="#">Weiterlesen</a>
         </article>
         
-        <article>
-            <img src="https://picsum.photos/400/200?random=3" alt="JavaScript Bild">
-            <h3>JavaScript für Einsteiger</h3>
-            <p>Einfache JavaScript-Konzepte für interaktive Webseiten.</p>
-            <a href="#">Weiterlesen</a>
+        <article style="border: 1px solid #ddd; border-radius: 5px; overflow: hidden;">
+            <img style="width: 100%; height: 200px; object-fit: cover;" src="https://picsum.photos/400/200?random=3" alt="JavaScript Bild">
+            <h3 style="margin: 1rem 0 0.5rem; padding: 0 1rem;">JavaScript für Einsteiger</h3>
+            <p style="margin-bottom: 1rem; color: #555; padding: 0 1rem;">Einfache JavaScript-Konzepte für interaktive Webseiten.</p>
+            <a style="display: inline-block; margin: 0 1rem 1rem; color: #3182ce; text-decoration: none; font-weight: bold; padding: 0 1rem;" href="#">Weiterlesen</a>
         </article>
     </main>
 
     <!-- Footer -->
-    <footer>
+    <footer style="background-color: #2f9447; color: rgb(22, 11, 43); text-align: center; padding: 1.5rem; margin-top: 2rem;">
         <p>© 2025 Mein Blog. Alle Rechte vorbehalten.</p>
     </footer>
 </body>
