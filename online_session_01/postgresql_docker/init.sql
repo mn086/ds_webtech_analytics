@@ -1,9 +1,6 @@
 -- Create test user with password
 CREATE USER testuser WITH PASSWORD 'testpassword';
 
--- Create test database
-CREATE DATABASE testdb;
-
 -- Grant privileges to test user on test database
 GRANT ALL PRIVILEGES ON DATABASE testdb TO testuser;
 

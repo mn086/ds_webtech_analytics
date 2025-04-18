@@ -1,5 +1,3 @@
-
-
 services:
   apache-php:
     build:
@@ -7,15 +5,23 @@ services:
       dockerfile: Dockerfile
     container_name: apache-php-postgresql
     ports:
-      - "80:80"
+      - "8080:80"
     volumes:
       - ./htdocs:/var/www/html
     environment:
       - APACHE_DOCUMENT_ROOT=/var/www/html
     restart: unless-stopped
     networks:
-      - web-network
+      - postgres-network
+    dns:
+      - 8.8.8.8
+      - 8.8.4.4
+
+# WICHTIG: Nach dem Start des Containers muss dieser explizit mit dem PostgreSQL-Netzwerk verbunden werden:
+# docker network connect postgresql_docker_postgres-network apache-php-postgresql
+# Dies ist notwendig, da beide Container (Apache und PostgreSQL) in separaten docker-compose.yml Dateien definiert sind
+# und daher standardmäßig in verschiedenen Netzwerken erstellt werden.
 
 networks:
-  web-network:
+  postgres-network:
     driver: bridge
